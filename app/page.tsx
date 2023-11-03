@@ -24,9 +24,11 @@ const Page: React.FC = () => {
             <div className="flex-1 text-center md:text-left md:pr-8">
               <h1 className="text-3xl md:text-4xl font-bold mb-2">Deepfake &amp; Gay</h1>
               <p className="text-xl mb-4">Benning Hergsvåg</p>
-              <p className="mb-4">Benning Hergsvåg, en markant stemme i norsk poesi, fortsetter å utforske samtidskulturen med sin nyeste diktsamling &quot;Deepfake&quot;. Hergsvåg, som debuterte med &quot;Newfoundland&quot; og har etablert seg med flere kritikerroste samlinger, tar i &quot;Deepfake&quot; for seg den digitale tidsalders tvetydighet.</p>
+              <p className="mb-4">
+"Deepfake & Gay" er den nyeste diktsamlingen fra Benning Hergsvåg, en prominent figur i norsk poesi. Med denne samlingen fortsetter han sin undersøkelse av nåtidens kultur, med et spesielt fokus på den digitale æraens ambivalens..</p>
               <p>
-                Med skarpt blikk avdekker han hvordan teknologi kan forvrenge vår oppfattelse av virkeligheten. &quot;Deepfake&quot; er en kraftfull samling som utfordrer leseren til å gjenkjenne og verdsette vår tids sammensatte realiteter.
+               
+I "Deepfake & Gay" avdekker Hergsvåg med en skarp observasjonsevne hvordan teknologi kan fordreie vår forståelse av virkeligheten. Dette er en tankevekkende samling som inviterer leseren til å anerkjenne og verdsette kompleksiteten i vår moderne eksistens.
               </p>
               <button
                 onClick={() => setShowPoetryPlayer(true)}
