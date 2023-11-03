@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 const PoetryPlayer: React.FC = () => {
   const [poemIndex, setPoemIndex] = useState(0);
@@ -66,6 +67,13 @@ const PoetryPlayer: React.FC = () => {
   return (
     <div className="flex w-full h-screen bg-black text-white p-4">
       <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 p-4 transition-transform transform ${introPlayed ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:w-1/6 md:fixed md:top-0 md:left-0 md:h-full md:bg-opacity-80`}>
+        <div className="border-b border-white">
+          <Link href="/" passHref>
+            <div className="block p-2 text-white hover:bg-white hover:text-black cursor-pointer">
+              Hovedside
+            </div>
+          </Link>
+        </div>
         <ul className="text-white">
           {poemTitles.map((title, index) => (
             <li
