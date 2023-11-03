@@ -25,8 +25,8 @@ const Page: React.FC = () => {
         {!showPoetryPlayer ? (
           <div className="w-full h-screen flex flex-col items-center justify-center p-8 bg-black text-white md:flex-row">
             <div className="flex-1 flex justify-center mb-8 md:mb-0">
-              <div className="relative" style={{ width: '100%', maxWidth: '500px' }}>
-                <Image src="/images/cover.jpg" alt="Cover" width={500} height={750} className="rounded-lg" />
+              <div className="relative w-2/5 max-w-xs md:max-w-sm md:w-full">
+                <Image src="/images/cover.jpg" alt="Cover" layout="fill" className="rounded-lg" />
               </div>
             </div>
             <div className="flex-1 text-left md:pr-20 md:pl-8">
