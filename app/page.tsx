@@ -23,7 +23,7 @@ const Page: React.FC = () => {
                 <Image src="/images/cover.jpg" alt="Cover" width={500} height={750} className="rounded-lg" />
               </div>
             </div>
-            <div className="flex-1 text-center md:text-left md:pl-8">
+            <div className="flex-1 text-center md:text-left pr-4 md:pl-8"> {/* Increased right padding */}
               <h1 className="text-3xl md:text-4xl font-bold mb-2">Deepfake &amp; Gay</h1>
               <p className="text-xl mb-4">av Benning Hergsvåg</p>
               <p className="mb-4">
