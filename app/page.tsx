@@ -10,9 +10,15 @@ const Page: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Deepfake: Benning Hergsvåg</title>
+        <title>Deepfake: Benning Hersvåg - Lytt til Skuespillerlinjens Opplesning</title>
         <link rel="icon" href="/path/to/your/custom-icon.ico" />
         {/* Additional SEO configurations can be added here */}
+        <meta name="description" content="Opplev Benning Hersvågs nyeste diktsamling 'Deepfake & Gay' gjennom stemmene til elever ved skuespillerlinjen. En unik sonisk utforskning av moderne eksistens." />
+        <meta property="og:title" content="Deepfake: Benning Hersvåg" />
+        <meta property="og:description" content="Lytt til elever ved skuespillerlinjen formidle Benning Hersvågs 'Deepfake & Gay', en tankevekkende utforskning av den digitale tidsalder." />
+        <meta property="og:image" content="/images/cover.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.yourdomain.com" />
       </Head>
 
       <main className="min-h-screen bg-gray-100">
@@ -23,14 +29,14 @@ const Page: React.FC = () => {
                 <Image src="/images/cover.jpg" alt="Cover" width={500} height={750} className="rounded-lg" />
               </div>
             </div>
-            <div className="flex-1 text-center md:text-left pr-4 md:pl-8">
+            <div className="flex-1 text-left md:pr-20 md:pl-8">
               <h1 className="text-3xl md:text-4xl font-bold mb-2">Deepfake &amp; Gay</h1>
-              <p className="text-xl mb-4">av Benning Hergsvåg</p>
+              <p className="text-xl mb-4">av Benning Hersvåg</p>
               <p className="mb-4">
-                &quot;Deepfake &amp; Gay&quot; er den nyeste diktsamlingen fra Benning Hergsvåg, en prominent figur i norsk poesi. Med denne samlingen fortsetter han sin undersøkelse av nåtidens kultur, med et spesielt fokus på den digitale æraens ambivalens.
+                "Deepfake &amp; Gay" er den nyeste diktsamlingen fra Benning Hersvåg, en fremtredende skikkelse innen moderne norsk poesi. Denne samlingen utforsker dyptgående nåtidens kulturelle dynamikker og teknologiens innvirkning på vår virkelighet.
               </p>
               <p>
-                I &quot;Deepfake &amp; Gay&quot; avdekker Hergsvåg med en skarp observasjonsevne hvordan teknologi kan fordreie vår forståelse av virkeligheten. Dette er en tankevekkende samling som inviterer leseren til å anerkjenne og verdsette kompleksiteten i vår moderne eksistens.
+                Oppdag "Deepfake &amp; Gay" gjennom stemmene til elever ved skuespillerlinjen, og la deg omslutte av den soniske dybden i Hersvågs poesi. Bli med på en reise gjennom komplekse følelser og skarpe innsikter som definerer vår tid.
               </p>
               <button
                 onClick={() => setShowPoetryPlayer(true)}
