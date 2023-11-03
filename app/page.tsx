@@ -1,5 +1,4 @@
-'use client'; // Add this line to mark the module for 
-// page.tsx
+'use client';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import PoetryPlayer from './PoetryPlayer';
@@ -24,8 +23,8 @@ const Page: React.FC = () => {
               <h1 className="text-3xl md:text-4xl font-bold mb-2">Deepfake & Gay</h1>
               <p className="text-xl mb-4">Benning Hergsvåg</p>
               <p className="mb-4">Benning Hergsvåg, en markant stemme i norsk poesi, fortsetter å utforske samtidskulturen med sin nyeste diktsamling "Deepfake". Hergsvåg, som debuterte med "Newfoundland" og har etablert seg med flere kritikerroste samlinger, tar i "Deepfake" for seg den digitale tidsalders tvetydighet.</p>
-              <p>
-                Med skarpt blikk avdekker han hvordan teknologi kan forvrenge vår oppfattelse av virkeligheten. "Deepfake" er en kraftfull samling som utfordrer leseren til å gjenkjenne og verdsette vår tids sammensatte realiteter.
+              <p className="mb-4">
+                {`Benning Hergsvåg, en markant stemme i norsk poesi, fortsetter å utforske samtidskulturen med sin nyeste diktsamling "Deepfake". Hergsvåg, som debuterte med "Newfoundland" og har etablert seg med flere kritikerroste samlinger, tar i "Deepfake" for seg den digitale tidsalders tvetydighet.`}
               </p>
               <button
                 onClick={() => setShowPoetryPlayer(true)}
