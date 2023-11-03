@@ -71,7 +71,7 @@ const PoetryPlayer: React.FC = () => {
             onClick={playNextPoem}
             className="mt-4 px-4 py-2 bg-black text-white border border-white rounded hover:bg-white hover:text-black focus:outline-none"
           >
-            Next Poem
+            Neste Dikt
           </button>
         </div>
         <audio
