@@ -71,7 +71,7 @@ const PoetryPlayer: React.FC<{ setShowPoetryPlayer: React.Dispatch<React.SetStat
   };
 
   return (
-    <div className="flex w-full h-screen bg-black text-white p-4">
+    <div className="flex w-full min-h-[100svh] bg-black text-white p-4">
       <button className="md:hidden absolute top-5 right-5 text-white text-3xl z-10" onClick={toggleNav}>
         &#x2630;
       </button>
