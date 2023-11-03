@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const PoetryPlayer: React.FC = () => {
   const [poemIndex, setPoemIndex] = useState(0);
-  const poemTitles = ['Deepfake', 'Title for Poem 2'];
+  const poemTitles = ['Deepfake', 'Virtuelle Refleksjoner'];
   const poems = ['/poems/poem1.txt', '/poems/poem2.txt'];
   const [poemContent, setPoemContent] = useState('');
   const [isPlaying, setIsPlaying] = useState(true);
