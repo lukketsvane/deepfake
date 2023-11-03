@@ -6,8 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,13 +28,4 @@ body {
 
 .whitespace-pre-line {
   white-space: pre-line;
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none !important;
-}
-
-.hide-scrollbar {
-  -ms-overflow-style: none !important;  /* IE and Edge */
-  scrollbar-width: none !important;  /* Firefox */
 }
