@@ -72,10 +72,10 @@ const PoetryPlayer: React.FC<{ setShowPoetryPlayer: React.Dispatch<React.SetStat
 
   return (
     <div className="flex w-full h-screen bg-black text-white p-4">
+      <button className="md:hidden absolute top-5 right-5 text-white text-3xl z-10" onClick={toggleNav}>
+        &#x2630;
+      </button>
       <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 p-4 transition-transform transform ${isNavOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:w-1/6 md:fixed md:top-0 md:left-0 md:h-full md:bg-opacity-80`}>
-        <button className="md:hidden absolute top-5 right-5 text-white text-3xl" onClick={toggleNav}>
-          &#x2630;
-        </button>
         <div className="border-b border-white">
           <a
             onClick={() => { setShowPoetryPlayer(false); toggleNav(); }}
