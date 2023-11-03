@@ -17,7 +17,7 @@ const Page: React.FC = () => {
 
       <main className="min-h-screen bg-gray-100">
         {!showPoetryPlayer ? (
-          <div className="w-full h-screen flex flex-col items-center justify-center p-8 bg-black text-white md:flex-row">
+          <div className="w-full h-screen flex flex-col items-center justify-center p-8 bg-black text-white text-left md:text-center md:flex-row">
             <div className="flex-1 flex justify-center mb-8 md:mb-0">
               <div className="relative" style={{ width: '100%', maxWidth: '200px' }}>
                 <Image
@@ -30,7 +30,7 @@ const Page: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="flex-1 text-center md:text-left md:pl-8 lg:pr-32">
+            <div className="flex-1 md:text-left md:pl-8 lg:pr-32">
               <h1 className="text-3xl md:text-4xl font-bold mb-2">Deepfake &amp; Gay: Stemmer fra fremtiden</h1>
               <p className="text-xl mb-4">av Benning Hergsvåg</p>
               <p className="mb-4">
