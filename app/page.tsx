@@ -48,7 +48,7 @@ const Page: React.FC = () => {
             </div>
           </div>
         ) : (
-          <PoetryPlayer />
+          <PoetryPlayer setShowPoetryPlayer={setShowPoetryPlayer} />
         )}
       </main>
     </>
