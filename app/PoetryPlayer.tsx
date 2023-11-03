@@ -23,7 +23,8 @@ const PoetryPlayer: React.FC = () => {
 
   useEffect(() => {
     fetchPoemContent(poems[poemIndex]);
-  }, [poemIndex]);
+  // Include poems in the dependency array
+  }, [poemIndex, poems]);
 
   useEffect(() => {
     if (audioRef.current) {
