@@ -15,10 +15,10 @@ const Page: React.FC = () => {
         {/* Additional SEO configurations can be added here */}
       </Head>
 
-      <main className="min-h-screen bg-gray-100">
+      <main className="min-h-[100svh] bg-gray-100">
         {!showPoetryPlayer ? (
-          <div className="w-full h-screen flex flex-col items-center justify-center p-8 bg-black text-white text-left md:text-center md:flex-row">
-            <div className="flex-1 flex justify-center mb-8 md:mb-0">
+          <div className="w-full flex flex-col items-center justify-center p-8 bg-black text-white text-left md:text-center md:flex-row">
+            <div className="flex-1 flex justify-center items-center mb-8 md:mb-0">
               <div className="relative" style={{ width: '100%', maxWidth: '200px' }}>
                 <Image
                   src="/images/cover.jpg"
