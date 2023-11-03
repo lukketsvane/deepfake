@@ -10,8 +10,9 @@ const Page: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Poetry Collection</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Deepfake: Benning Hergsvåg</title>
+        <link rel="icon" href="/path/to/your/custom-icon.ico" />
+        {/* Additional SEO configurations can be added here */}
       </Head>
 
       <main className="min-h-screen bg-gray-100">
