@@ -5,6 +5,7 @@ import Link from 'next/link';
 const PoetryPlayer: React.FC<{ setShowPoetryPlayer: React.Dispatch<React.SetStateAction<boolean>> }> = ({ setShowPoetryPlayer }) => {
   const [poemIndex, setPoemIndex] = useState(0);
   const [introPlayed, setIntroPlayed] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false); // State for mobile navigation
   const poemTitles = ['Deepfake', 'Virtuelle Refleksjoner', 'Fragmenter', 'Usikker', 'Spiderman'];
   const poems = ['/poems/poem1.txt', '/poems/poem2.txt', '/poems/poem3.txt', '/poems/poem4.txt', '/poems/poem5.txt'];
   const [poemContent, setPoemContent] = useState('');
@@ -64,12 +65,20 @@ const PoetryPlayer: React.FC<{ setShowPoetryPlayer: React.Dispatch<React.SetStat
     }
   };
 
+  // Toggle mobile navigation
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div className="flex w-full h-screen bg-black text-white p-4">
-      <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 p-4 transition-transform transform ${introPlayed ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:w-1/6 md:fixed md:top-0 md:left-0 md:h-full md:bg-opacity-80`}>
+      <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 p-4 transition-transform transform ${isNavOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:w-1/6 md:fixed md:top-0 md:left-0 md:h-full md:bg-opacity-80`}>
+        <button className="md:hidden absolute top-5 right-5 text-white text-3xl" onClick={toggleNav}>
+          &#x2630;
+        </button>
         <div className="border-b border-white">
           <a
-            onClick={() => setShowPoetryPlayer(false)}
+            onClick={() => { setShowPoetryPlayer(false); toggleNav(); }}
             className="block p-2 text-white hover:bg-white hover:text-black cursor-pointer"
           >
             Hovedside
@@ -80,7 +89,7 @@ const PoetryPlayer: React.FC<{ setShowPoetryPlayer: React.Dispatch<React.SetStat
             <li
               key={title}
               className={`cursor-pointer p-2 ${poemIndex === index ? 'bg-white text-black' : ''}`}
-              onClick={() => selectPoem(index)}
+              onClick={() => { selectPoem(index); toggleNav(); }}
             >
               {title}
             </li>
