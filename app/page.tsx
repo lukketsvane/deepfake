@@ -11,7 +11,7 @@ const Page: React.FC = () => {
     <>
       <Head>
         <title>Deepfake: Benning Hersvåg - Lytt til Skuespillerlinjens Opplesning</title>
-        <link rel="icon" href="/path/to/your/custom-icon.ico" />
+        <link rel="icon" href="/vercel.ico" />
         {/* Additional SEO configurations can be added here */}
         <meta name="description" content="Opplev Benning Hersvågs nyeste diktsamling 'Deepfake & Gay' gjennom stemmene til elever ved skuespillerlinjen. En unik sonisk utforskning av moderne eksistens." />
         <meta property="og:title" content="Deepfake: Benning Hersvåg" />

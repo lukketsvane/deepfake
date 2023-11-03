@@ -11,14 +11,12 @@ const PoetryPlayer: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const introAudioRef = useRef<HTMLAudioElement>(null);
 
-  // Function to fetch poem content
   const fetchPoemContent = async (path: string) => {
     const response = await fetch(path);
     const text = await response.text();
     setPoemContent(text);
   };
 
-  // Function to play the next poem
   const playNextPoem = () => {
     const nextIndex = (poemIndex + 1) % poems.length;
     setPoemIndex(nextIndex);
@@ -28,12 +26,10 @@ const PoetryPlayer: React.FC = () => {
     }
   };
 
-  // Effect to fetch poem content when poemIndex changes
   useEffect(() => {
     fetchPoemContent(poems[poemIndex]);
   }, [poemIndex]);
 
-  // Effect to handle playing and pausing the audio
   useEffect(() => {
     if (isPlaying && introPlayed) {
       audioRef.current?.play();
@@ -42,7 +38,6 @@ const PoetryPlayer: React.FC = () => {
     }
   }, [isPlaying, introPlayed]);
 
-  // Effect to play intro when necessary
   useEffect(() => {
     if (poemIndex === 0 && !introPlayed) {
       setIsPlaying(false);
@@ -50,23 +45,19 @@ const PoetryPlayer: React.FC = () => {
     }
   }, [poemIndex, introPlayed]);
 
-  // Function to toggle play and pause
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
-  // Function to handle the end of the intro
   const onIntroEnd = () => {
     setIntroPlayed(true);
     setIsPlaying(true);
   };
 
-  // Function to set the poem index and manage audio state
   const selectPoem = (index: number) => {
     setPoemIndex(index);
     setIsPlaying(false);
     setIntroPlayed(index === 0 ? false : true);
-    // Reset the audioRef source to ensure the new poem audio loads
     if (audioRef.current) {
       audioRef.current.src = `/audio/poem${index + 1}.mp3`;
     }
