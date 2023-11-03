@@ -97,7 +97,7 @@ const PoetryPlayer: React.FC<{ setShowPoetryPlayer: React.Dispatch<React.SetStat
         </ul>
       </div>
       <div className="flex-1 flex flex-col items-center justify-center ml-[16.666667%] md:ml-1/6">
-        <div className="text-center mb-4">
+        <div className="text-left md:text-center mb-4 w-full md:w-auto">
           <h1 className="text-4xl font-bold mb-4">{poemTitles[poemIndex]}</h1>
         </div>
         <div className="max-h-full w-full md:max-w-2xl p-6 overflow-y-auto hide-scrollbar">
