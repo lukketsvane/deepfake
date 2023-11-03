@@ -66,6 +66,10 @@ const PoetryPlayer: React.FC = () => {
     setPoemIndex(index);
     setIsPlaying(false);
     setIntroPlayed(index === 0 ? false : true);
+    // Reset the audioRef source to ensure the new poem audio loads
+    if (audioRef.current) {
+      audioRef.current.src = `/audio/poem${index + 1}.mp3`;
+    }
   };
 
   return (
@@ -95,7 +99,7 @@ const PoetryPlayer: React.FC = () => {
             onClick={togglePlayPause}
             className="mt-4 px-4 py-2 bg-black text-white border border-white rounded hover:bg-white hover:text-black focus:outline-none"
           >
-            {isPlaying ? 'Pause' : 'Play'}
+            {isPlaying ? '⏸' : '▶️'}
           </button>
           <button
             onClick={playNextPoem}
